@@ -80,7 +80,7 @@ public class BunyanFilter implements InputFilter {
     @Override
     protected PipeProcessing initialValue() {
       return new PipeProcessing(new String[]{
-          findBunyan() //, "--color"
+          findBunyan() , "--color"
       }, "", "[bunyan-error] ", 30);
     }
   };
