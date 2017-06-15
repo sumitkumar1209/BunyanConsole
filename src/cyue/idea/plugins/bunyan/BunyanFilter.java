@@ -38,7 +38,7 @@ public class BunyanFilter implements InputFilter {
   }
 
   public static final String[] PREFERED_BUNYAN_LOCS = new String[]{
-      "/usr/local/bin/bunyan"
+      "/usr/local/bin/bunyan -o short"
   };
 
   private static Path bunyanPath = null;
@@ -80,7 +80,7 @@ public class BunyanFilter implements InputFilter {
     @Override
     protected PipeProcessing initialValue() {
       return new PipeProcessing(new String[]{
-          findBunyan() , "--color"
+          findBunyan() //, "--color"
       }, "", "[bunyan-error] ", 30);
     }
   };
